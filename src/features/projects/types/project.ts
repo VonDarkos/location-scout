@@ -10,7 +10,7 @@ export type ProductionType =
   | "other";
 
 export type OperationalStatus = "none" | "paused" | "cancelled";
-export type TemporalStatus = "upcoming" | "active" | "completed"
+export type TemporalStatus = "upcoming" | "active" | "completed";
 
 export type Project = {
   id: string;
@@ -24,6 +24,6 @@ export type Project = {
   peopleCount: number;
   description?: string;
   notes?: string;
+  productionType: ProductionType;
   operationalStatus: OperationalStatus;
 };
-
