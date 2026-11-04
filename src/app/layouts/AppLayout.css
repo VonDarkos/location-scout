@@ -16,6 +16,24 @@
   transform: none;
 }
 
+/* Shown while the free demo API wakes up (see SlowApiNotice) */
+.slow-api-notice {
+  position: fixed;
+  bottom: var(--space-4);
+  left: 50%;
+  z-index: 30;
+  width: min(560px, calc(100% - 2 * var(--space-4)));
+  padding: var(--space-3) var(--space-4);
+  background: var(--info-soft);
+  border: 1px solid #c5d6ea;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-hover);
+  color: var(--info);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transform: translateX(-50%);
+}
+
 /* main receives focus only as the skip link target: no outline around the whole page */
 .app-main:focus {
   outline: none;

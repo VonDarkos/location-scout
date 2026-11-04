@@ -1,0 +1,37 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# Two free services from this repository:
+#   location-scout-api  JSON Server serving db.json (demo data, reset on every restart)
+#   location-scout      the React app, built by Vite and served as a static site
+
+services:
+  - type: web
+    name: location-scout-api
+    runtime: node
+    plan: free
+    # json-server is a devDependency: install it explicitly
+    buildCommand: npm ci --include=dev
+    # Render assigns the port through $PORT; 0.0.0.0 makes the server reachable from outside
+    startCommand: npx json-server db.json --host 0.0.0.0 --port $PORT
+    healthCheckPath: /clients
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+
+  - type: web
+    name: location-scout
+    runtime: static
+    buildCommand: npm ci && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Public URL of location-scout-api, e.g. https://location-scout-api.onrender.com
+      # Vite inlines it at build time: after changing it, redeploy this site.
+      - key: VITE_API_URL
+        sync: false
+    routes:
+      # SPA fallback: every path serves index.html and React Router handles it,
+      # so refreshing /projects/123 works
+      - type: rewrite
+        source: /*
+        destination: /index.html
