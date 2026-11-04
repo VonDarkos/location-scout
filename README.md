@@ -3,8 +3,8 @@
 A location management tool for photographers, video makers and small production agencies.
 Catalogue shooting locations, plan productions for your clients, and build a shortlist of locations for each project — checking at a glance which ones fit the brief.
 
-> **Live demo:** not published yet.
-> The demo runs on free hosting: the first load after a quiet period can take up to a minute, and changes are reset from time to time. See [Demo limitations](#demo-limitations).
+> **Live demo:** [location-scout-five.vercel.app](https://location-scout-five.vercel.app/)
+> The demo API runs on free hosting: the first load after a quiet period can take up to a minute, and changes are reset from time to time. See [Demo limitations](#demo-limitations).
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
@@ -136,16 +136,24 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the reasoning behind this structure.
 
 ## Deployment
 
-The app is deployed on [Render](https://render.com) free tier, described in [`render.yaml`](render.yaml) as two services:
+The frontend and the API are hosted separately, both on free plans:
 
-| Service | Type | What it runs |
-| --- | --- | --- |
-| `location-scout-api` | Web Service (free) | `json-server db.json` on the port Render assigns (`$PORT`) |
-| `location-scout` | Static Site | the Vite build in `dist/`, with every path rewritten to `index.html` so React Router handles refreshes and deep links |
+```text
+Browser ──► Vercel  (static React build)  https://location-scout-five.vercel.app
+   │
+   └──────► Render  (JSON Server API)     https://location-scout-api.onrender.com
+```
 
-`VITE_API_URL` is set on the static site to the public URL of the API service. Vite inlines it at build time, so the site must be redeployed after the value changes.
+| Part | Host | Config | What it runs |
+| --- | --- | --- | --- |
+| Frontend | [Vercel](https://vercel.com) | [`vercel.json`](vercel.json) | `npm run build`, serving `dist/`. Every path is rewritten to `index.html`, so React Router handles refreshes and deep links such as `/projects/1` |
+| API | [Render](https://render.com) Web Service (free) | [`render.yaml`](render.yaml) | `json-server db.json` on the port Render assigns (`$PORT`) |
 
-JSON Server sends `Access-Control-Allow-Origin: *`, so the two services can live on different domains without extra CORS setup.
+`VITE_API_URL` is set in the Vercel project settings to the public URL of the Render API. Vite inlines it at build time, so the frontend must be redeployed after the value changes.
+
+JSON Server sends `Access-Control-Allow-Origin: *`, so the frontend and the API can live on different domains without extra CORS setup.
+
+`render.yaml` also describes a Render static site for the frontend. It is not used by the live demo, but it lets the whole app be deployed on Render as a single Blueprint.
 
 ## Demo limitations
 
