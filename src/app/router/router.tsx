@@ -5,7 +5,7 @@ import ProjectsPage from "../../pages/ProjectsPage";
 import CreateProjectPage from "../../pages/CreateProjectPage";
 import ProjectDetailPage from "../../pages/ProjectDetailPage";
 import EditProjectPage from "../../pages/EditProjectPage";
-import SelectLocationsPage from "../../pages/SelectLocationsPage";
+import AddProjectLocationsPage from "../../pages/AddProjectLocationsPage";
 import LocationsPage from "../../pages/LocationsPage";
 import CreateLocationPage from "../../pages/CreateLocationPage";
 import LocationDetailPage from "../../pages/LocationDetailPage";
@@ -24,7 +24,7 @@ export const router = createBrowserRouter([
         {path:"projects/new", element:<CreateProjectPage/>},
         {path:"projects/:projectId", element:<ProjectDetailPage/>},
         {path:"projects/:projectId/edit", element:<EditProjectPage/>},
-        {path:"projects/:projectId/locations/add", element:<SelectLocationsPage/>},
+        {path:"projects/:projectId/locations/add", element:<AddProjectLocationsPage/>},
         {path:"locations", element:<LocationsPage/>},
         {path:"locations/new", element:<CreateLocationPage/>},
         {path:"locations/:locationId", element:<LocationDetailPage/>},

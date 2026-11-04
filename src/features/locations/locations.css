@@ -1,0 +1,122 @@
+/* Locations list ---------------------------------------------------------- */
+
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-5);
+}
+
+.results-count {
+  margin-bottom: var(--space-3);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.location-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.15s ease;
+}
+
+.location-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.location-card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--border);
+  object-fit: cover;
+}
+
+.location-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.location-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.location-card-title {
+  min-width: 0;
+  color: var(--text);
+  font-size: 1.0625rem;
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.location-card-title:hover {
+  color: var(--accent);
+}
+
+.location-card-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-4);
+  font-size: 0.875rem;
+}
+
+.favorite-button {
+  align-self: flex-start;
+  margin-top: auto;
+  margin-left: calc(var(--space-3) * -1);
+  padding: var(--space-2) var(--space-3);
+  font-size: 0.875rem;
+}
+
+.favorite-button.is-favorite {
+  color: var(--accent);
+}
+
+/* Location detail --------------------------------------------------------- */
+
+.location-detail {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.location-detail-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--border);
+  object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .location-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .location-detail-image {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 600px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+.location-detail-list {
+  margin-top: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}

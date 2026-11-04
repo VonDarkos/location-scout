@@ -31,4 +31,9 @@ export type Location = {
   email?: string;
   description?: string;
   notes?: string;
+  createdAt : string;
 };
+
+export type LocationInput = Omit<Location, "id" | "createdAt">;
+export type CreateLocationInput = LocationInput;
+export type UpdateLocationInput = LocationInput;

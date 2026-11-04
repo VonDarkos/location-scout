@@ -115,7 +115,7 @@
       "endDate": "2026-10-14",
       "city": "Barcelona",
       "area": "Poblenou / Gràcia",
-      "locationBudget": 1000,
+      "locationBudget": 9000,
       "peopleCount": 12,
       "description": "Servizio editoriale per magazine di moda, atmosfere mediterranee e luce calda.",
       "operationalStatus": "none"
@@ -169,7 +169,8 @@
       "phone": "+39 02 4851 7730",
       "email": "booking@studiolucenord.it",
       "description": "Studio fotografico con grandi vetrate esposte a nord e cyclorama bianco.",
-      "notes": "Disponibile anche il weekend con supplemento."
+      "notes": "Disponibile anche il weekend con supplemento.",
+      "createdAt": "2026-05-04T09:14:32.000Z"
     },
     {
       "id": "loc-2",
@@ -188,7 +189,8 @@
       "image": "https://picsum.photos/seed/loc-2/800/600",
       "contactName": "Sara Colombo",
       "email": "sara@loftnavigli.it",
-      "description": "Loft su due livelli con travi a vista e affaccio sul Naviglio Grande."
+      "description": "Loft su due livelli con travi a vista e affaccio sul Naviglio Grande.",
+      "createdAt": "2026-05-10T15:47:05.000Z"
     },
     {
       "id": "loc-3",
@@ -208,7 +210,8 @@
       "contactName": "Davide Galli",
       "phone": "+39 02 2610 4498",
       "description": "Ex capannone industriale, ideale per set costruiti ed eventi.",
-      "notes": "Carico e scarico dal retro, altezza 7 m."
+      "notes": "Carico e scarico dal retro, altezza 7 m.",
+      "createdAt": "2026-05-14T11:02:48.000Z"
     },
     {
       "id": "loc-4",
@@ -228,7 +231,8 @@
       "contactName": "Elena Moretti",
       "phone": "+39 031 334 812",
       "email": "eventi@villasole.it",
-      "description": "Villa ottocentesca con giardino all'italiana e pontile privato."
+      "description": "Villa ottocentesca con giardino all'italiana e pontile privato.",
+      "createdAt": "2026-05-23T17:30:19.000Z"
     },
     {
       "id": "loc-5",
@@ -248,7 +252,8 @@
       "contactName": "Paolo Neri",
       "phone": "+39 340 118 2934",
       "email": "info@microstudioisola.it",
-      "description": "Piccolo studio attrezzato per still life e ritratti."
+      "description": "Piccolo studio attrezzato per still life e ritratti.",
+      "createdAt": "2026-05-26T08:55:41.000Z"
     },
     {
       "id": "loc-6",
@@ -267,7 +272,8 @@
       "image": "https://picsum.photos/seed/loc-6/800/600",
       "contactName": "Francesca Riva",
       "email": "terrazza@brera-events.it",
-      "notes": "Nessuna presa elettrica: portare generatore."
+      "notes": "Nessuna presa elettrica: portare generatore.",
+      "createdAt": "2026-06-06T14:21:07.000Z"
     },
     {
       "id": "loc-7",
@@ -286,7 +292,8 @@
       "image": "https://picsum.photos/seed/loc-7/800/600",
       "contactName": "Roberto Sala",
       "phone": "+39 02 6379 0051",
-      "description": "Open space al 12° piano con vista sullo skyline."
+      "description": "Open space al 12° piano con vista sullo skyline.",
+      "createdAt": "2026-06-11T10:38:56.000Z"
     },
     {
       "id": "loc-8",
@@ -306,7 +313,8 @@
       "contactName": "Valerio Conti",
       "phone": "+39 06 4782 3316",
       "email": "valerio@palazzomonti.it",
-      "description": "Loft in palazzo storico con soffitti affrescati."
+      "description": "Loft in palazzo storico con soffitti affrescati.",
+      "createdAt": "2026-06-18T16:09:23.000Z"
     },
     {
       "id": "loc-9",
@@ -327,7 +335,8 @@
       "phone": "+39 06 4201 5590",
       "email": "events@hotelaurelia.it",
       "description": "Suite e terrazza panoramica all'ultimo piano.",
-      "notes": "Riprese consentite solo dalle 9 alle 18."
+      "notes": "Riprese consentite solo dalle 9 alle 18.",
+      "createdAt": "2026-06-20T12:44:10.000Z"
     },
     {
       "id": "loc-10",
@@ -346,7 +355,8 @@
       "image": "https://picsum.photos/seed/loc-10/800/600",
       "contactName": "Gianni Ferrante",
       "phone": "+39 06 6880 1427",
-      "description": "Osteria tradizionale nel Ghetto, disponibile nel giorno di chiusura."
+      "description": "Osteria tradizionale nel Ghetto, disponibile nel giorno di chiusura.",
+      "createdAt": "2026-06-30T09:51:37.000Z"
     },
     {
       "id": "loc-11",
@@ -365,7 +375,8 @@
       "image": "https://picsum.photos/seed/loc-11/800/600",
       "contactName": "Ufficio Permessi Parco",
       "email": "permessi@parcoacquedotti.it",
-      "notes": "Richiede permesso comunale con 15 giorni di anticipo."
+      "notes": "Richiede permesso comunale con 15 giorni di anticipo.",
+      "createdAt": "2026-07-08T18:16:02.000Z"
     },
     {
       "id": "loc-12",
@@ -385,7 +396,8 @@
       "contactName": "Beatrice Innocenti",
       "phone": "+39 055 599 2031",
       "email": "info@villalecolline.it",
-      "description": "Villa toscana tra ulivi e cipressi con limonaia."
+      "description": "Villa toscana tra ulivi e cipressi con limonaia.",
+      "createdAt": "2026-07-12T13:27:45.000Z"
     },
     {
       "id": "loc-13",
@@ -404,7 +416,8 @@
       "image": "https://picsum.photos/seed/loc-13/800/600",
       "contactName": "Tommaso Bellini",
       "email": "tommaso@studiooltrarno.it",
-      "description": "Studio luminoso in bottega artigiana ristrutturata."
+      "description": "Studio luminoso in bottega artigiana ristrutturata.",
+      "createdAt": "2026-07-18T10:05:18.000Z"
     },
     {
       "id": "loc-14",
@@ -424,7 +437,8 @@
       "contactName": "Andrea Rosso",
       "phone": "+39 011 437 9920",
       "email": "location@exfabbricadora.it",
-      "description": "Fabbrica riconvertita con shed a dente di sega e grandi volumi."
+      "description": "Fabbrica riconvertita con shed a dente di sega e grandi volumi.",
+      "createdAt": "2026-07-30T15:58:30.000Z"
     },
     {
       "id": "loc-15",
@@ -443,7 +457,8 @@
       "image": "https://picsum.photos/seed/loc-15/800/600",
       "contactName": "Marta Gallo",
       "phone": "+39 011 658 2204",
-      "description": "Coworking con arredi vintage e sala riunioni vetrata."
+      "description": "Coworking con arredi vintage e sala riunioni vetrata.",
+      "createdAt": "2026-08-02T08:33:54.000Z"
     },
     {
       "id": "loc-16",
@@ -463,7 +478,8 @@
       "contactName": "Jordi Puig",
       "phone": "+34 932 187 440",
       "email": "hola@naupoblenou.es",
-      "description": "Nave industriale nel distretto 22@ con lucernari."
+      "description": "Nave industriale nel distretto 22@ con lucernari.",
+      "createdAt": "2026-08-11T11:49:26.000Z"
     },
     {
       "id": "loc-17",
@@ -483,7 +499,8 @@
       "contactName": "Núria Vidal",
       "email": "nuria@casagracia.es",
       "description": "Appartamento modernista con terrazza sui tetti.",
-      "notes": "Ascensore assente, quarto piano."
+      "notes": "Ascensore assente, quarto piano.",
+      "createdAt": "2026-08-16T17:12:08.000Z"
     },
     {
       "id": "loc-18",
@@ -503,7 +520,50 @@
       "contactName": "Don Carlo Bassi",
       "phone": "+39 051 227 318",
       "description": "Chiesa sconsacrata con navata unica e rosone.",
-      "notes": "Impianto elettrico non disponibile, serve generatore esterno."
+      "notes": "Impianto elettrico non disponibile, serve generatore esterno.",
+      "createdAt": "2026-08-23T14:36:51.000Z"
+    },
+    {
+      "name": "Camp Nou",
+      "city": "Barcelona",
+      "address": "C/ Arístides Maillol",
+      "type": "other",
+      "environment": "both",
+      "dailyPrice": 1800,
+      "capacity": 105000,
+      "surface": 58760,
+      "parking": true,
+      "naturalLight": false,
+      "electricity": true,
+      "accessible": true,
+      "image": "https://espaibarca.fcbarcelona.com/assets/themes/1/img/media/1723465199_11_Entrada_por_tribuna.thigh.webp",
+      "contactName": "FcBarcelona",
+      "phone": "+34934963600",
+      "email": "oab@fcbarcelona.cat",
+      "description": "",
+      "notes": "",
+      "id": "FwzzRTx7UiM",
+      "createdAt": "2026-09-05T10:20:43.000Z"
+    },
+    {
+      "name": "Ub Barcelona",
+      "city": "Barcelona",
+      "address": "Gran Via de les Corts Catalanes, 585, Eixample,",
+      "type": "other",
+      "environment": "indoor",
+      "dailyPrice": 3000,
+      "capacity": 50,
+      "surface": 1000,
+      "parking": true,
+      "naturalLight": false,
+      "electricity": true,
+      "accessible": true,
+      "image": "https://web.ub.edu/documents/2685349/2697071/Edifici+fa%C3%A7ana+3.jpg/3cfe6e4c-f823-4ee2-2025-b54e1f3eeb07?version=2.1&t=1734081965180&imagePreview=1",
+      "contactName": "Ub",
+      "phone": "354634634",
+      "email": "ub@ub.com",
+      "createdAt": "2026-10-12T10:49:29.612Z",
+      "id": "XyJb9I7NfC0"
     }
   ],
   "projectLocations": [
@@ -512,7 +572,7 @@
       "projectId": "p-1",
       "locationId": "loc-1",
       "status": "approved",
-      "order": 1,
+      "order": 3,
       "addedAt": "2026-02-10T09:30:00.000Z"
     },
     {
@@ -669,6 +729,15 @@
       "locationId": "loc-18",
       "status": "rejected",
       "addedAt": "2026-09-01T11:04:00.000Z"
+    },
+    {
+      "projectId": "p-6",
+      "locationId": "XyJb9I7NfC0",
+      "status": "approved",
+      "addedAt": "2026-10-12T10:49:54.665Z",
+      "id": "kyZyPz96B-I",
+      "order": 2
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

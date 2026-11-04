@@ -8,6 +8,8 @@ export type ProjectLocation = {
   projectId: Project["id"];
   locationId: Location["id"];
   status: ProjectLocationStatus;
-  order?: number;
+  order?: number | null;
   addedAt: string;
 };
+
+export type UpdateProjectLocationInput = Partial<Pick<ProjectLocation, "status" | "order">>;

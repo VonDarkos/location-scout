@@ -1,4 +1,6 @@
+import type { ProjectLocation } from "../../../shared/types/projectLocation";
 import type { Client } from "../../clients/types/client";
+import type { Location } from "../../locations/types/location";
 
 export type ProductionType =
   | "fashion"
@@ -24,6 +26,15 @@ export type Project = {
   peopleCount: number;
   description?: string;
   notes?: string;
-  productionType: ProductionType;
-  operationalStatus: OperationalStatus;
+  productionType: ProductionType ;
+  operationalStatus: OperationalStatus ;
 };
+
+
+export type ProjectInput = Omit<Project,"id">
+export type CreateProjectInput = ProjectInput
+export type UpdateProjectInput = ProjectInput
+export type ProjectLocationWithData = {
+  relation:ProjectLocation,
+  location:Location
+}

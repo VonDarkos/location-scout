@@ -8,3 +8,6 @@ export type Client = {
   email: string;
   phone: string;
 };
+
+export type ClientInput = Omit<Client, "id">;
+export type UpdateClientInput = ClientInput

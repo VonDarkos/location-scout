@@ -1,0 +1,239 @@
+/* Project detail ---------------------------------------------------------- */
+
+.project-badges {
+  margin-top: var(--space-2);
+}
+
+/* Project locations section ---------------------------------------------- */
+
+.project-locations {
+  margin-top: var(--space-6);
+}
+
+.project-locations-header {
+  margin-bottom: var(--space-3);
+}
+
+.status-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+  padding: var(--space-1);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.status-tab {
+  min-height: 36px;
+  padding: var(--space-1) var(--space-3);
+  background: transparent;
+  border: 0;
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-tab:hover {
+  background: var(--surface-muted);
+  color: var(--text);
+}
+
+.status-tab[aria-pressed="true"] {
+  background: var(--accent);
+  color: #fff;
+}
+
+.project-location {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.project-location .list-item-main {
+  flex: 1 1 auto;
+}
+
+.project-location-thumb,
+.selection-card-thumb {
+  width: 72px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  background: var(--border);
+  object-fit: cover;
+}
+
+.project-location-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+}
+
+.project-location-controls select {
+  width: auto;
+  min-width: 140px;
+}
+
+.reorder {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.reorder-position {
+  min-width: 64px;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Add locations to project ------------------------------------------------ */
+
+.selection-list {
+  display: grid;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.selection-card {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.selection-card:hover:not(.is-disabled) {
+  border-color: var(--border-strong);
+}
+
+.selection-card.is-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+  background: #f7fbfa;
+}
+
+.selection-card.is-disabled {
+  background: var(--surface-muted);
+  box-shadow: none;
+}
+
+.selection-card.is-disabled .selection-card-thumb {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.selection-card.is-disabled .selection-card-name {
+  color: var(--text-muted);
+}
+
+.selection-card-main {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.selection-card.is-disabled .selection-card-main {
+  cursor: not-allowed;
+}
+
+.selection-card-text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+
+.selection-card-name {
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.notices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.notice {
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+/* Blocking reason: strongest. Warnings: visible but do not block. Info: quiet. */
+.notice-blocked {
+  background: var(--danger-soft);
+  border-color: #efc9c5;
+  border-left: 4px solid var(--danger);
+  color: var(--danger);
+  font-weight: 650;
+}
+
+.notice-warning {
+  background: var(--warning-soft);
+  border-color: #ecd9a6;
+  color: var(--warning);
+}
+
+.notice-info {
+  background: var(--surface);
+  color: var(--text-muted);
+}
+
+.selection-footer {
+  position: sticky;
+  bottom: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 -2px 10px rgba(31, 29, 26, 0.06);
+}
+
+@media (max-width: 900px) {
+  .project-location {
+    flex-wrap: wrap;
+  }
+
+  .project-location-controls {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .status-tabs {
+    display: flex;
+  }
+
+  .status-tab {
+    flex: 1 1 auto;
+  }
+
+  .project-location-controls select {
+    flex: 1 1 140px;
+  }
+
+  .selection-card-main {
+    align-items: flex-start;
+  }
+
+  .selection-footer .btn {
+    width: 100%;
+  }
+}
