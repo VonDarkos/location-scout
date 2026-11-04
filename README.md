@@ -4,6 +4,7 @@ A location management tool for photographers, video makers and small production 
 Catalogue shooting locations, plan productions for your clients, and build a shortlist of locations for each project — checking at a glance which ones fit the brief.
 
 > **Live demo:** not published yet.
+> The demo runs on free hosting: the first load after a quiet period can take up to a minute, and changes are reset from time to time. See [Demo limitations](#demo-limitations).
 
 ![Dashboard](docs/screenshots/dashboard.png)
 
@@ -103,7 +104,7 @@ Tests focus on behaviour, not implementation details:
 - query and mutation hooks against MSW handlers (success, error, cache invalidation)
 - forms: validation, error messages linked to fields, focus moved to the first invalid field
 - pages: rendering after data loads
-- layout: focus and document title after navigation
+- layout: focus and document title after navigation, and the notice shown while the API wakes up
 
 Network calls are mocked with MSW, so the suite does not need JSON Server running.
 
@@ -133,7 +134,25 @@ See [ARCHITECTURE.md](ARCHITECTURE.md) for the reasoning behind this structure.
 - **Cascade deletes in the API layer.** JSON Server has no relations or transactions, so cascades are done by the frontend API functions. With a real backend this belongs to the server or the database, inside a transaction.
 - **Accessibility.** Labelled controls, errors linked with `aria-describedby`, focus moved to the first invalid field, live regions for loading and errors, a page title per route, focus moved to the content after navigation, and a skip link.
 
-## Limitations
+## Deployment
 
-- JSON Server is a development backend: there is no authentication, and cascades are not atomic.
-- Location images are external URLs typed in by the user. Broken links fall back to a placeholder.
+The app is deployed on [Render](https://render.com) free tier, described in [`render.yaml`](render.yaml) as two services:
+
+| Service | Type | What it runs |
+| --- | --- | --- |
+| `location-scout-api` | Web Service (free) | `json-server db.json` on the port Render assigns (`$PORT`) |
+| `location-scout` | Static Site | the Vite build in `dist/`, with every path rewritten to `index.html` so React Router handles refreshes and deep links |
+
+`VITE_API_URL` is set on the static site to the public URL of the API service. Vite inlines it at build time, so the site must be redeployed after the value changes.
+
+JSON Server sends `Access-Control-Allow-Origin: *`, so the two services can live on different domains without extra CORS setup.
+
+## Demo limitations
+
+These come from the free hosting and from JSON Server. They are accepted trade-offs for a portfolio demo:
+
+- **Cold start.** The free API service sleeps after about 15 minutes without traffic. The next request wakes it up, which can take up to a minute. The app shows a "waking up the demo server" notice while a request takes longer than a few seconds.
+- **Data is not persistent.** The API writes to `db.json` on the service's temporary disk. Every restart or redeploy goes back to the seed data in the repository. Records created in the demo are visible to every visitor until then.
+- **No authentication.** Anyone with the link can create, edit and delete records.
+- **Cascades are not atomic.** JSON Server has no transactions, so a failure in the middle of a cascade delete could leave orphaned links. In production this would be the backend's job.
+- **External images.** Location images are URLs typed in by users. Broken links fall back to a "No image" placeholder.
